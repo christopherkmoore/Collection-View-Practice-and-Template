@@ -22,7 +22,7 @@ class CollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // This will be the layout that uses flow line-breaking default to display a grid of items for our view. The sizing works for my iPhone 5c but needs to be tested for others (should work).
-    lazy var verticleScrollLayout: UICollectionViewLayout = {
+    lazy var verticalScrollLayout: UICollectionViewLayout = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsetsMake(4, 4, 4, 4)
         
@@ -31,7 +31,6 @@ class CollectionViewController: UIViewController {
         
         
         let width = floor(self.collectionView.frame.size.width/3 - 3)
-        let height = floor(self.collectionView.frame.size.height / 3)
         layout.itemSize = CGSize(width: width, height: width)
         return layout
     }()
@@ -65,14 +64,14 @@ class CollectionViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
 
-        collectionView.collectionViewLayout = verticleScrollLayout
+        collectionView.collectionViewLayout = verticalScrollLayout
     }
     
     // Selector message that will resize to a horizontal scroll. We remove the gesture recognizer after the view layout has changed so we can listen for the delegate method to fire (when we will want to resize back to our normal view again).
     
-    func resizeLayoutForHorizontalScroll(_ sender: UIGestureRecognizer) {
+    func resizeLayoutForVerticalScroll(_ sender: UIGestureRecognizer) {
         UIView.animate(withDuration: 0.5) {
-            self.collectionView.collectionViewLayout = self.verticleScrollLayout
+            self.collectionView.collectionViewLayout = self.verticalScrollLayout
             self.collectionView.removeGestureRecognizer(sender)
         }
     }
@@ -111,7 +110,7 @@ extension CollectionViewController: UICollectionViewDelegate {
    
         // create and add the gesture regonizer, set the selector to our function for resizing layout
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CollectionViewController.resizeLayoutForHorizontalScroll(_:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CollectionViewController.resizeLayoutForVerticalScroll(_:)))
         collectionView.addGestureRecognizer(tap)
         
         // create a simple animation to change the layout here.
