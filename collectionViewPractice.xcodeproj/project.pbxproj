@@ -14,7 +14,6 @@
 		794375A71DFA17C2009BDC48 /* collectionViewPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794375A61DFA17C2009BDC48 /* collectionViewPracticeUITests.swift */; };
 		794375B51DFA17D2009BDC48 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794375B41DFA17D2009BDC48 /* CollectionViewController.swift */; };
 		794375B71DFCA545009BDC48 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794375B61DFCA545009BDC48 /* CollectionViewCell.swift */; };
-		794375B91DFCA561009BDC48 /* MaximizedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794375B81DFCA561009BDC48 /* MaximizedCollectionViewCell.swift */; };
 		794375BC1DFCAA50009BDC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794375BA1DFCAA50009BDC48 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +48,6 @@
 		794375A81DFA17C2009BDC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		794375B41DFA17D2009BDC48 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		794375B61DFCA545009BDC48 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		794375B81DFCA561009BDC48 /* MaximizedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaximizedCollectionViewCell.swift; sourceTree = "<group>"; };
 		794375BB1DFCAA50009BDC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,14 +99,12 @@
 		794375851DFA17C2009BDC48 /* collectionViewPractice */ = {
 			isa = PBXGroup;
 			children = (
+				79AC26111DFF665900602274 /* Views */,
 				794375861DFA17C2009BDC48 /* AppDelegate.swift */,
 				7943758D1DFA17C2009BDC48 /* Assets.xcassets */,
 				7943758F1DFA17C2009BDC48 /* LaunchScreen.storyboard */,
 				794375BA1DFCAA50009BDC48 /* Main.storyboard */,
 				794375921DFA17C2009BDC48 /* Info.plist */,
-				794375B41DFA17D2009BDC48 /* CollectionViewController.swift */,
-				794375B61DFCA545009BDC48 /* CollectionViewCell.swift */,
-				794375B81DFCA561009BDC48 /* MaximizedCollectionViewCell.swift */,
 			);
 			path = collectionViewPractice;
 			sourceTree = "<group>";
@@ -129,6 +125,15 @@
 				794375A81DFA17C2009BDC48 /* Info.plist */,
 			);
 			path = collectionViewPracticeUITests;
+			sourceTree = "<group>";
+		};
+		79AC26111DFF665900602274 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				794375B41DFA17D2009BDC48 /* CollectionViewController.swift */,
+				794375B61DFCA545009BDC48 /* CollectionViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				794375B51DFA17D2009BDC48 /* CollectionViewController.swift in Sources */,
-				794375B91DFCA561009BDC48 /* MaximizedCollectionViewCell.swift in Sources */,
 				794375871DFA17C2009BDC48 /* AppDelegate.swift in Sources */,
 				794375B71DFCA545009BDC48 /* CollectionViewCell.swift in Sources */,
 			);
@@ -520,6 +524,7 @@
 				794375AD1DFA17C2009BDC48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		794375AE1DFA17C2009BDC48 /* Build configuration list for PBXNativeTarget "collectionViewPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				794375B01DFA17C2009BDC48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		794375B11DFA17C2009BDC48 /* Build configuration list for PBXNativeTarget "collectionViewPracticeUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				794375B31DFA17C2009BDC48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

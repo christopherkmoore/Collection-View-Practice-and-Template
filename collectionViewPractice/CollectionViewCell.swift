@@ -10,11 +10,5 @@ import Foundation
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    
-    
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-    }
+
 }
